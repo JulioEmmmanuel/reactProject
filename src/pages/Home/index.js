@@ -42,7 +42,7 @@ function Home() {
 
   return (
     <>
-      <Header displayAmount="visible" />
+      <Header displayCart="visible" />
       <Container>
         <List>
           {travelList.map((el) => {

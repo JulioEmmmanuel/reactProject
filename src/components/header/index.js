@@ -6,7 +6,7 @@ import { Container, HeaderContainer, Cart } from "./styles";
 import CartContext from "../../context/cart";
 
 function Header(props) {
-  const { displayAmount } = props;
+  const { displayCart } = props;
 
   const { state } = useContext(CartContext);
 
@@ -22,7 +22,7 @@ function Header(props) {
           <img src={logo} alt="logo" />
         </Link>
         <Link to="/cart">
-          <Cart displayAmount={displayAmount}>
+          <Cart displayCart={displayCart}>
             <div>
               <span>{totalQuantity}</span>
             </div>

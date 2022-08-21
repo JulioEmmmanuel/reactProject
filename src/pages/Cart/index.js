@@ -50,7 +50,7 @@ function Cart() {
 
   return (
     <>
-      <Header displayAmount="hidden" />
+      <Header displayCart="hidden" />
       <Container>
         <ContainerList>
           {state.cart.map((el) => {

@@ -21,9 +21,9 @@ export const HeaderContainer = styled.div`
 export const Cart = styled.div`
   display: flex;
   align-items: center;
+  visibility: ${(props) => props.displayCart};
 
   div {
-    visibility: ${(props) => props.displayAmount};
     background-color: #fff;
     width: 30px;
     height: 30px;
