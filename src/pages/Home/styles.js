@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Container = styled.main`
   width: 100%;
@@ -7,27 +7,34 @@ export const Container = styled.main`
   justify-content: center;
 `;
 
+const BigText = css`
+  @media (min-width: 460px) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1200px) {
+    & {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+`;
+
 export const List = styled.ul`
   width: 100%;
   max-width: 950px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+  ${BigText}
 `;
+
 export const Unit = styled.div`
   background-color: #fff;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
   padding: 40px 20px;
-
-  @media only screen and (max-wdith: 960px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media only screen and (max-width: 540px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
 
   img {
     max-width: 240px;
@@ -52,6 +59,7 @@ export const Unit = styled.div`
     border-radius: 5px;
     display: flex;
     align-items: center;
+    box-shadow: 0 4px #999;
 
     div {
       display: flex;
@@ -65,5 +73,15 @@ export const Unit = styled.div`
       text-align: center;
       font-weight: 600;
     }
+  }
+
+  button:hover {
+    background-color: #054f92;
+  }
+
+  button:active {
+    background-color: #054f92;
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
   }
 `;

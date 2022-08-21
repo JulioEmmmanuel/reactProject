@@ -23,6 +23,7 @@ export const Cart = styled.div`
   align-items: center;
 
   div {
+    visibility: ${(props) => props.displayAmount};
     background-color: #fff;
     width: 30px;
     height: 30px;

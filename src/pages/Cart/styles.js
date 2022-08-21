@@ -7,6 +7,8 @@ export const Container = styled.div`
   border-radius: 5px;
   padding: 36px 44px;
   margin-top: 45px;
+  margin-left: auto;
+  margin-right: auto;
   max-width: 950px;
   background-color: #fff;
 `;
@@ -21,7 +23,7 @@ export const TravelItem = styled.li`
   display: flex;
   margin-bottom: 10px;
   padding-bottom: 10px;
-  border: 1px solid #665;
+  border-bottom: 1px solid #665;
   justify-content: space-between;
   align-items: center;
 
@@ -35,6 +37,7 @@ export const Info = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  flex-basis: 100px;
 
   p {
     font-size: 14px;
@@ -62,9 +65,13 @@ export const Subtotal = styled.div`
   display: flex;
   font-weight: 600;
   font-size: 16px;
-  align-items: right;
+  align-items: center;
 
   p {
+    margin-right: 10px;
+  }
+
+  button {
     margin-right: 10px;
   }
 `;

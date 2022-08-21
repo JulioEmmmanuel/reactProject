@@ -5,8 +5,11 @@ import logo from "../../assets/logo.png";
 import { Container, HeaderContainer, Cart } from "./styles";
 import CartContext from "../../context/cart";
 
-function Header() {
-  const { setState, state } = useContext(CartContext);
+function Header(props) {
+  const { displayAmount } = props;
+
+  const { state } = useContext(CartContext);
+
   const totalQuantity = state.cart.reduce(
     (acc, travel) => acc + travel.quantity,
     0
@@ -19,7 +22,7 @@ function Header() {
           <img src={logo} alt="logo" />
         </Link>
         <Link to="/cart">
-          <Cart>
+          <Cart displayAmount={displayAmount}>
             <div>
               <span>{totalQuantity}</span>
             </div>
